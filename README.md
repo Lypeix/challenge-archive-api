@@ -1,6 +1,7 @@
 # Challenge Archive API
 
 Database-backed REST API for gaming challenges, rules, attempts and completions
+
 Assisted by Codex 5.6 Sol
 
 ## Technology
