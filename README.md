@@ -26,7 +26,7 @@ Assisted by Codex 5.6 Sol
 - [ ] Create `DeclarativeBase`
 - [ ] Create session factory
 - [ ] Add `get_db()` dependency yielding one session per request
-- [ ] Add application lifespan handler
+- [x] Add application lifespan handler
 - [ ] Configure SQLite foreign-key enforcement
 
 ### Games
