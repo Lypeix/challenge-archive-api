@@ -23,11 +23,11 @@ Assisted by Codex 5.6 Sol
 - [x] Create virtual environment and requirements
 - [x] Create FastAPI application
 - [x] Configure SQLAlchemy engine
-- [ ] Create `DeclarativeBase`
-- [ ] Create session factory
-- [ ] Add `get_db()` dependency yielding one session per request
+- [x] Create `DeclarativeBase`
+- [x] Create session factory
+- [x] Add `get_db()` dependency yielding one session per request
 - [x] Add application lifespan handler
-- [ ] Configure SQLite foreign-key enforcement
+- [x] Configure SQLite foreign-key enforcement
 
 ### Games
 

@@ -15,3 +15,26 @@ engine = create_engine( # knows which db system is being used, where db is, mana
     connect_args={"check_same_thread": False} # allows connection to be used across different threads
                                               # thread is an executor that handles requests sent to endpoints
 )
+
+
+@event.listens_for(engine, "connect") # this decorator runs the function below whenever engine estabilishes a new SQLite connection
+def enable_sqlite_foreign_keys(
+    dbapi_connection, # sqlite3 connection
+    _connection_record # stores SQLAlchemy's info abt dbapi_connection
+):
+    cursor = dbapi_connection.cursor()
+    cursor.execute("PRAGMA FOREIGN_KEYS = ON") # lets tables use values from other tables
+    cursor.close()
+
+class Base(DeclarativeBase): # base becomes the parent class for every SQLAlchemy model
+    pass 
+
+SessionLocal = sessionmaker( # creates sessions, aka. ORM equivalent of sqlite's cursor workflow (parser/communicator between server n sqlalchemy language)
+    bind=engine, # every session made by Sessionlocal uses the previously configured engine
+    expire_on_commit=False # True is default because SQLAlchemy marks values as possibly outdated, so it reloads them when used again 
+                           # keeps the values available after already saving/comiting. No idea why use false yet, I'll find out next session
+)
+
+def get_db(): 
+    with SessionLocal() as session:
+        yield session # gives session to endpoint > func pauses > endpoint handles client request > endpoint finishes > func resumes
