@@ -22,7 +22,7 @@ Assisted by Codex 5.6 Sol
 - [x] Create GitHub repository and multi-file structure
 - [x] Create virtual environment and requirements
 - [x] Create FastAPI application
-- [ ] Configure SQLAlchemy engine
+- [x] Configure SQLAlchemy engine
 - [ ] Create `DeclarativeBase`
 - [ ] Create session factory
 - [ ] Add `get_db()` dependency yielding one session per request

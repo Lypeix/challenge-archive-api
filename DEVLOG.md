@@ -10,6 +10,10 @@
 - Installed required tech
 
 ## DAY 2 - 28.07.2026
-### SESSION 1 (19:55-)
+### SESSION 1 (19:55-20:22)
 - Created FastAPI app instance
-- Added app lifespan handler (no tables creation yet)
+- Added app lifespan handler foundation
+- Added pathing to database.py
+- Created database URL
+- Configured SQLAlchemy engine in database.py
+- Added few comments
