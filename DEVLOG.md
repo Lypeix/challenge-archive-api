@@ -20,3 +20,4 @@
 - Implemented foreign keys
 - Estabilished DeclarativeBase
 - Made session factory
+- Finished app lifespan handler in main.py
