@@ -20,6 +20,7 @@
 - Implemented foreign keys
 - Established DeclarativeBase
 - Made session factory
+- Added get_db() yielding one session per request
 - Finished app lifespan handler in main.py
 - Added more space between comments
 - Fixed typos
