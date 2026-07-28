@@ -10,7 +10,7 @@
 - Installed required tech
 
 ## DAY 2 - 28.07.2026
-### SESSION 1 (19:55-20:55)
+### SESSION 1 (19:55-21:01)
 - Created FastAPI app instance
 - Added app lifespan handler foundation
 - Added pathing to database.py
