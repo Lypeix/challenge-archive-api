@@ -11,15 +11,17 @@ DATABASE_PATH = (
 DATABASE_URL = f"sqlite:///{DATABASE_PATH.as_posix()}" # converts filesystem location into SQLAlchemy connection URL
 
 engine = create_engine( # knows which db system is being used, where db is, manages connections, gives sessions access to the db
+    
     DATABASE_URL,
     connect_args={"check_same_thread": False} # allows connection to be used across different threads
                                               # thread is an executor that handles requests sent to endpoints
 )
 
 
-@event.listens_for(engine, "connect") # this decorator runs the function below whenever engine estabilishes a new SQLite connection
+@event.listens_for(engine, "connect") # this decorator runs the function below whenever engine establishes a new SQLite connection
 def enable_sqlite_foreign_keys(
     dbapi_connection, # sqlite3 connection
+    
     _connection_record # stores SQLAlchemy's info abt dbapi_connection
 ):
     cursor = dbapi_connection.cursor()
@@ -30,9 +32,11 @@ class Base(DeclarativeBase): # base becomes the parent class for every SQLAlchem
     pass 
 
 SessionLocal = sessionmaker( # creates sessions, aka. ORM equivalent of sqlite's cursor workflow (parser/communicator between server n sqlalchemy language)
+    
     bind=engine, # every session made by Sessionlocal uses the previously configured engine
+
     expire_on_commit=False # True is default because SQLAlchemy marks values as possibly outdated, so it reloads them when used again 
-                           # keeps the values available after already saving/comiting. No idea why use false yet, I'll find out next session
+                          # keeps the values available after already saving/commiting. No idea why use false yet, I'll find out next session
 )
 
 def get_db(): 

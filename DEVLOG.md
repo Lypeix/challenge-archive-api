@@ -18,6 +18,8 @@
 - Configured SQLAlchemy engine in database.py
 - Added few comments
 - Implemented foreign keys
-- Estabilished DeclarativeBase
+- Established DeclarativeBase
 - Made session factory
 - Finished app lifespan handler in main.py
+- Added more space between comments
+- Fixed typos

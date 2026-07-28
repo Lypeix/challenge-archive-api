@@ -13,6 +13,6 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Challenge Archive API!",
-    description="A nice little personal project where I'll add some gaming challanges",
+    description="A nice little personal project where I'll add some gaming challenges",
     lifespan=lifespan
 )
