@@ -24,3 +24,6 @@
 - Finished app lifespan handler in main.py
 - Added more space between comments
 - Fixed typos
+
+## DAY 3 - 29.07.2026
+BREAK DAY
