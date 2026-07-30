@@ -10,7 +10,9 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker # In Base(DeclarativeBa
                                                          # sessionmaker creates a factory for db sessions (session manages current interaction between app n db)
 
 DATABASE_PATH = (
-    Path(__file__).resolve().parent.parent / "challenge-archive.db" # After conversions in here the path becomes C:\projects\challenge-archive-api (project root)
+    Path(__file__).resolve().parent.parent / "challange-archive.db" # After conversions in here the path becomes C:\projects\challenge-archive-api (project root)
                                                                     # then it describes that challenge-archivedb should be there
 )
 
+DATABASE_URL = f"sqlite:///{DATABASE_PATH.as_posix()}" # DATABASE_PATH.as_posix() transforms Path object into a string using forward slashes
+                                                       # Then it adds the textual value into SQLAlchemy db URL
