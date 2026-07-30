@@ -26,4 +26,8 @@
 - Fixed typos
 
 ## DAY 3 - 29.07.2026
-BREAK DAY
+### BREAK DAY
+
+## DAY 4 - 30.07.2026
+### Note: - From 1st to 3rd of August, I will be on a vacation trip to Krynica.
+### SESSION 1 (21:20-x)
