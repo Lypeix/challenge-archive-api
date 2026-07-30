@@ -31,3 +31,7 @@
 ## DAY 4 - 30.07.2026
 ### Note: - From 1st to 3rd of August, I will be on a vacation trip to Krynica.
 ### SESSION 1 (21:20-x)
+(Every reconstruction was made in in reskined_reconstruction / database n features explanatory comment)
+- Reconstructed imports 
+- Reconstructed DATABASE_PATH 
+- Reconstructed DATABASE_URL
