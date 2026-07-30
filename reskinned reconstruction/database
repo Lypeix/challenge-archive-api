@@ -1,7 +1,7 @@
 from pathlib import Path # Path represents filesystem location as an object. It exists to not have to manually construct paths with string
 
 from sqlalchemy import create_engine, event # engine is a SQLAlchemy connector that knows which db system is used, where db is, how to get n manage db connections 
-                                            # n which db drive should communicate with it
+                                            # n which db driver should communicate with it
                                             # event allows to register functions that SQLalchemy runs when certain things happen 
 
 
@@ -10,7 +10,7 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker # In Base(DeclarativeBa
                                                          # sessionmaker creates a factory for db sessions (session manages current interaction between app n db)
 
 DATABASE_PATH = (
-    Path(__file__).resolve().parent.parent / "challange-archive.db" # After conversions in here the path becomes C:\projects\challenge-archive-api (project root)
-                                                                    # then it creates challange-archivedb there
+    Path(__file__).resolve().parent.parent / "challenge-archive.db" # After conversions in here the path becomes C:\projects\challenge-archive-api (project root)
+                                                                    # then it describes that challenge-archivedb should be there
 )
 
