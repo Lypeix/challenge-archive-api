@@ -31,13 +31,13 @@
 ## DAY 4 - 30.07.2026
 ### Note: From 1st to 3rd of August, I will be on a vacation trip to Krynica.
 ### SESSION 1 (21:20-22:38)
-### Every reconstruction was made in in reskined_reconstruction / database n features explanatory comment
+### Every reconstruction was completed in reskined_reconstruction / database n includes explanatory comment
 - Reconstructed imports 
 - Reconstructed DATABASE_PATH 
 - Reconstructed DATABASE_URL
 - Reconstructed engine
-- Reconstructed foreign keys 
-- Fixed foreign keys explanatory comment in the actual db file
+- Reconstructed foreign-key enforcement
+- Fixed foreign-key enforcement explanatory comment in the actual db file
 - Reconstructed DeclarativeBase class
 - Reconstructed session factory
 - Reconstructed the db session dependency
