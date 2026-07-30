@@ -24,3 +24,13 @@ engine = create_engine(
 )                                             # however this is set to false, therefore it can be accessed by other threads
 
 
+@event.listens_for(engine, "connect")
+def enable_sqlite_foreign_keys(
+    dbapi_connection, # sqlite3 connection
+    connection_record # required for the event cause it stores ORM's record for this connection, but its unused here
+):
+
+    cursor = dbapi_connection.cursor()
+    cursor.execute("PRAGMA foreign_keys = ON") # Makes SQLite reject references to rows that don't exist
+    cursor.close()
+    

@@ -25,7 +25,7 @@ def enable_sqlite_foreign_keys(
     _connection_record # stores SQLAlchemy's info abt dbapi_connection
 ):
     cursor = dbapi_connection.cursor()
-    cursor.execute("PRAGMA FOREIGN_KEYS = ON") # lets tables use values from other tables
+    cursor.execute("PRAGMA FOREIGN_KEYS = ON") # Makes SQLite reject references to non-existent rows 
     cursor.close()
 
 class Base(DeclarativeBase): # base becomes the parent class for every SQLAlchemy model

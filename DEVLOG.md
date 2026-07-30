@@ -36,3 +36,5 @@
 - Reconstructed DATABASE_PATH 
 - Reconstructed DATABASE_URL
 - Reconstructed engine
+- Reconstructed foreign keys 
+- Fixed foreign keys explanatory comment in the actual db file
