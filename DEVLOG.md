@@ -40,3 +40,4 @@
 - Fixed foreign keys explanatory comment in the actual db file
 - Reconstructed DeclarativeBase class
 - Reconstructed session factory
+- Reconstructed the db session dependency

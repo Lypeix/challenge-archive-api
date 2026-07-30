@@ -43,3 +43,6 @@ SessionLocal = sessionmaker( # sets up a factory for db sessions
     expire_on_commit=False # keeps the attributes of ORM objects available after commiting instead of marking them for reload when accessed again
 )
 
+def get_db():
+    with SessionLocal() as session: # creates a session with/using the factory, then closes it after the with block ends (even if error occurs)
+        yield session # gives session to the endpoint, then pauses the function until endpoint finishes using it
