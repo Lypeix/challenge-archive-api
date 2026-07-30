@@ -38,3 +38,4 @@
 - Reconstructed engine
 - Reconstructed foreign keys 
 - Fixed foreign keys explanatory comment in the actual db file
+- Reconstructed DeclarativeBase class
