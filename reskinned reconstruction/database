@@ -16,3 +16,11 @@ DATABASE_PATH = (
 
 DATABASE_URL = f"sqlite:///{DATABASE_PATH.as_posix()}" # DATABASE_PATH.as_posix() transforms Path object into a string using forward slashes
                                                        # Then it adds the textual value into SQLAlchemy db URL
+
+
+engine = create_engine(
+    DATABASE_URL, # from this URL, engine learns to use SQLite dialect AND to use the db at this location
+    connect_args={"check_same_thread": False} # by default it means connection may only be used by the same thread that made it 
+)                                             # however this is set to false, therefore it can be accessed by other threads
+
+
