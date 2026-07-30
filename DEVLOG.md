@@ -31,7 +31,7 @@
 ## DAY 4 - 30.07.2026
 ### Note: From 1st to 3rd of August, I will be on a vacation trip to Krynica.
 ### SESSION 1 (21:20-22:42)
-### Every reconstruction was completed in `reskinned_reconstruction/database.py` n includes explanatory comment
+### Every reconstruction was completed in `reskinned-reconstruction/database.py` n includes explanatory comment
 - Reconstructed imports 
 - Reconstructed DATABASE_PATH 
 - Reconstructed DATABASE_URL
