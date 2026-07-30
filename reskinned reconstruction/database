@@ -36,3 +36,10 @@ def enable_sqlite_foreign_keys(
 
 class Base(DeclarativeBase): # lets db models be recognized as ORM models
     pass
+
+SessionLocal = sessionmaker( # sets up a factory for db sessions
+
+    bind=engine, # connects session factory to the engine
+    expire_on_commit=False # keeps the attributes of ORM objects available after commiting instead of marking them for reload when accessed again
+)
+
