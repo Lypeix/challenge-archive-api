@@ -16,9 +16,23 @@ class Game(Base):
     )
 
     title: Mapped[str] = mapped_column(
+        String(150), # defines db column as string text with max character length of 150
+        nullable=False, # means db cannot store NULL in the title column (though pydantic validation for whitespaces n other bypasses is still needed)
+        index=True # tells SQL to create idx for the title column
+    )
+
+    genre: Mapped[str] = mapped_column(
         String(150),
         nullable=False,
         index=True
     )
 
-    
+    release_year: Mapped[int] = mapped_column(
+        nullable=False
+    )
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False
+    )

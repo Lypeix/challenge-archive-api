@@ -7,8 +7,10 @@ from database import Base, engine
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=engine) # creates tables defined by Base models
-    yield # app handles requests when paused here
-    engine.dispose() # closes engine's connections when the app is finished handling requests
+    try:
+        yield # app handles requests when paused here
+    finally:
+        engine.dispose() # closes engine's connections when the app is finished handling requests
 
 
 app = FastAPI(
