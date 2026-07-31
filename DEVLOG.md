@@ -43,10 +43,11 @@
 - Reconstructed the db session dependency
 
 ## DAY 5 - 31.07.2026
-### SESSION 1 (15:53-x)
+### SESSION 1 (15:53-16:57)
 - Imported required tech to models.py
 - Built class Game(Base) in models.py
 - Added explanatory comments
 - Added guaranteed db cleanup w try/finally to app lifespan handler in main.py
-- Added GameBase, GameCreate, GameResponse schemas to schemas.py
-- Successfuly tested out the schemas in powershell
+- Added GameBase, GameCreate, GameUpdate, GameResponse schemas to schemas.py
+- Successfuly tested the schemas in powershell
+- Created foundation for the Post endpoint
