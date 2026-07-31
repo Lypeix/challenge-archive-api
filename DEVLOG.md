@@ -49,3 +49,4 @@
 - Added explanatory comments
 - Added guaranteed db cleanup w try/finally to app lifespan handler in main.py
 - Added GameBase, GameCreate, GameResponse schemas to schemas.py
+- Successfuly tested out the schemas in powershell
