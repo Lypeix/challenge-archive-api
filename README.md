@@ -31,7 +31,7 @@ Assisted by Codex 5.6 Sol
 
 ### Games
 
-- [ ] Create `Game` SQLAlchemy model
+- [x] Create `Game` SQLAlchemy model
 - [ ] Create separate create, update, and response schemas
 - [ ] Configure Pydantic `from_attributes=True`
 - [ ] Add `POST /games`
