@@ -41,3 +41,8 @@
 - Reconstructed DeclarativeBase class
 - Reconstructed session factory
 - Reconstructed the db session dependency
+
+## DAY 5 - 31.07.2026
+### SESSION 1 (15:53-x)
+- Imported required tech to models.py
+- Built class Game foundations in models.py
