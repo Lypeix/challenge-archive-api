@@ -25,7 +25,7 @@ class GameBase(BaseModel): # defines what client sends to the server when creati
 class GameCreate(GameBase): # inherits validation from gamebase
     pass
 
-class GameUpdate(BaseModel): # defines how update rules, default=None so that SQLAlchemy doesnt update values to Null
+class GameUpdate(BaseModel): # defines how optional fields for partial game updates
     model_config = ConfigDict( 
         str_strip_whitespace=True 
         )
