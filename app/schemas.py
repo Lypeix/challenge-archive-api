@@ -25,7 +25,7 @@ class GameBase(BaseModel): # defines what client sends to the server when creati
 class GameCreate(GameBase): # inherits validation from gamebase
     pass
 
-class GameUpdate(BaseModel):
+class GameUpdate(BaseModel): # defines how update rules, default=None so that SQLAlchemy doesnt update values to Null
     model_config = ConfigDict( 
         str_strip_whitespace=True 
         )
@@ -48,9 +48,9 @@ class GameUpdate(BaseModel):
         le=2100
     )
 
-class GameResponse(GameBase):
+class GameResponse(GameBase): # defines what the server returns to the client
     model_config = ConfigDict(
-        from_attributes=True, # allows validation from ORM object attributes
+        from_attributes=True, # allows Pydantic to read object attributes n convert them into JSON response schema
         str_strip_whitespace=True
     )
 
