@@ -63,8 +63,8 @@
 - Refined n corrected earlier comments
 - Fixed some typos
 
-### SESSION 2 (22:12-22:45)
+### SESSION 2 (22:12-22:54)
 - Created POST endpoint in games.py (reconstruction 4 tmrw)
 - Connected endpoint to main.py
 - Successfully tested POST through SwaggerUI
-- Added explanatory comments
+- Added explanatory comments for every new LOC in games.py

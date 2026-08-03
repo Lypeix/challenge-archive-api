@@ -23,10 +23,11 @@ router = APIRouter( # creates a router that groups game-related endpoints
 )
 
 def create_game(
-    game_data: GameCreate,
-    session: Annotated[Session, Depends(get_db)]
-):
-    return crud.create_game(
+    game_data: GameCreate, # GameCreate is a Pydantic model, so FastAPI treats it as a JSON request body
+    session: Annotated[Session, Depends(get_db)] # tells Python, VSC n type checkers that session is a SQLAlchemy
+):                                               # gets the value for session parameter through get_db
+                                                 # FastAPI is responsible for calling get_db, so no need to add parantheses at the end
+    return crud.create_game( # calls create_game n its parameters from crud
         session,
         game_data
     )
