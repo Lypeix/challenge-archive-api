@@ -64,7 +64,8 @@
 - Fixed some typos
 
 ### SESSION 2 (22:12-22:54)
-- Created POST endpoint in games.py (reconstruction 4 tmrw)
-- Connected endpoint to main.py
-- Successfully tested POST through SwaggerUI
+- Created the `POST /games` endpoint in `games.py`
+- Registered the games router in `main.py`
+- Successfully tested `POST /games` through SwaggerUI
 - Added explanatory comments for every new LOC in games.py
+- Scheduled reconstruction of crud.py n games.py tomorrow
