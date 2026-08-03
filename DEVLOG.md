@@ -51,3 +51,8 @@
 - Added GameBase, GameCreate, GameUpdate, GameResponse schemas to schemas.py
 - Successfuly tested the schemas in powershell
 - Created foundation for the Post endpoint
+
+## DAY 6-7 - 01-02.08.2026
+- Project paused because of vacation trip to Krynica
+
+### SESSION 1 (20:41-x)
