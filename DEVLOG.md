@@ -56,3 +56,6 @@
 - Project paused because of vacation trip to Krynica
 
 ### SESSION 1 (20:41-x)
+- Renamed files in reskinned-reconstruction (they were identical to the ones from actual code)
+- Rebuilt part of models.py in reskinned-reconstruction models_reskin.py
+- Added explanatory comments
