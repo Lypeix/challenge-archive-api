@@ -8,3 +8,18 @@ from sqlalchemy.orm import Mapped, mapped_column # Mapped marks attribute as bel
                                                  # mapped_column defines the db column config for a mapped attribute 
 
 from app.database import Base # imports the declarative base class which marks python models as ORM models
+
+class Game(Base):
+    __tablename__ = "games"
+
+    id: Mapped[int] = mapped_column(
+
+
+        primary_key= True # without this, ORM may refuse to map a model
+    )
+
+    title: Mapped[str] = mapped_column(
+        String(150), # char limit
+        nullable=False, # title must not be NULL (SQL must recognize the value)
+        index=True # creates idx for the column
+)
