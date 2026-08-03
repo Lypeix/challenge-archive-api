@@ -1,8 +1,11 @@
+# py -m uvicorn app.main:app --reload
+
 from fastapi import FastAPI
 
 from contextlib import asynccontextmanager
 
-from database import Base, engine
+from app.database import Base, engine
+from app.routers import games
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,3 +21,5 @@ app = FastAPI(
     description="A nice little personal project where I'll add some gaming challenges",
     lifespan=lifespan
 )
+
+app.include_router(games.router)
