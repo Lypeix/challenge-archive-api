@@ -66,6 +66,6 @@
 ### SESSION 2 (22:12-22:54)
 - Created the `POST /games` endpoint in `games.py`
 - Registered the games router in `main.py`
-- Successfully tested `POST /games` through SwaggerUI
-- Added explanatory comments for every new LOC in games.py
-- Scheduled reconstruction of crud.py n games.py tomorrow
+- Successfully tested `POST /games` through Swagger UI
+- Added explanatory comments for every new LOC in `games.py`
+- Scheduled reconstruction of `crud.py` n `games.py` tomorrow
