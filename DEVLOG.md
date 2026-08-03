@@ -2,7 +2,7 @@
 
 ## DAY 1 - 27.07.2026
 ### SESSION 1 (15:12-16:35)
-- Created github repo
+- Created GitHub repo
 - Created multi-file structure
 - Created .gitignore
 - Created virtual environment for localized installations
@@ -49,14 +49,16 @@
 - Added explanatory comments
 - Added guaranteed db cleanup w try/finally to app lifespan handler in main.py
 - Added GameBase, GameCreate, GameUpdate, GameResponse schemas to schemas.py
-- Successfuly tested the schemas in powershell
+- Successfully tested the schemas in PowerShell
 - Created foundation for the Post endpoint
 
 ## DAY 6-7 - 01-02.08.2026
 - Project paused because of vacation trip to Krynica
 
-### SESSION 1 (20:41-21:40)
+## DAY 8 - 03.08.2026
+### SESSION 1 (20:41-21:43)
 - Renamed files in `reskinned-reconstruction` (they were identical to the ones from actual code)
-- Recosntructed whole `models.py` as `models_reskin.py`
+- Reconstructed whole `models.py` as `models_reskin.py`
 - Explained the entire reconstruction with comments next to particular LOCs (lines of code, not sunglasses)
 - Refined n corrected earlier comments
+- Fixed some typos
