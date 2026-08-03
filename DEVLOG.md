@@ -55,7 +55,8 @@
 ## DAY 6-7 - 01-02.08.2026
 - Project paused because of vacation trip to Krynica
 
-### SESSION 1 (20:41-x)
-- Renamed files in reskinned-reconstruction (they were identical to the ones from actual code)
-- Rebuilt part of models.py in reskinned-reconstruction models_reskin.py
-- Added explanatory comments
+### SESSION 1 (20:41-21:40)
+- Renamed files in `reskinned-reconstruction` (they were identical to the ones from actual code)
+- Recosntructed whole `models.py` as `models_reskin.py`
+- Explained the entire reconstruction with comments next to particular LOCs (lines of code, not sunglasses)
+- Refined n corrected earlier comments
