@@ -1,4 +1,4 @@
-from datetime import datetime # imports python built-in date class
+from datetime import datetime # imports Python's date n time class
 
 from sqlalchemy import DateTime, String, func # DateTime tells SQLAlchemy that the db column stores date n time values
                                               # String - db-side string
