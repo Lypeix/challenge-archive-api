@@ -69,3 +69,7 @@
 - Successfully tested `POST /games` through Swagger UI
 - Added explanatory comments for every new LOC in `games.py`
 - Scheduled reconstruction of `crud.py` n `games.py` tomorrow
+
+## DAY 9 - 04.08.2026
+- Added German Devlog titled `LERNPROTOKOLL_DE.md` reskinned-reconstruction
+- Split `README.md` into `README.md` n `ROADMAP.md`
