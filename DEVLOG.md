@@ -77,5 +77,5 @@
 ### SESSION 1 (18:57-x)
 - Created reconstruction file
 - Reconstructed imports from memory
-- Reconstructed `Game` Pydantic model from memory
+- Reconstructed `GameBase` Pydantic model from memory
 - Added explanatory comments
