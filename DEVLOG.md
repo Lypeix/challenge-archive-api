@@ -84,7 +84,7 @@
 - Reconstructed `GameUpdate` model from memory
 - Reconstructed `GameResponse` model from memory
 
-### SESSION 2 (21:06-x)
+### SESSION 2 (21:06-21:39)
 - Reconstructed `crud.py imports` from memory
 - Reconstructed `create_game` from memory
 - Added explanatory comments
@@ -92,4 +92,3 @@
     - name: Type       # Expected type
     - name = value     # Default value
     - name: Type = x   # Expected type plus default value
-    
