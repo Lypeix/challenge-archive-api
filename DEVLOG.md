@@ -79,3 +79,6 @@
 - Reconstructed imports from memory
 - Reconstructed `GameBase` Pydantic model from memory
 - Added explanatory comments
+- Reconstructed missing `GameBase` model field n validation pieces from memory
+- Reconstructed `GameCreate` model from memory
+- Reconstructed `GameUpdate` model from memory
