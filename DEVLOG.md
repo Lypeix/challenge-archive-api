@@ -84,11 +84,15 @@
 - Reconstructed `GameUpdate` model from memory
 - Reconstructed `GameResponse` model from memory
 
-### SESSION 2 (21:06-21:39)
-- Reconstructed `crud.py imports` from memory
+### SESSION 2 (21:06-22:00)
+- Reconstructed imports in `crud.py` from memory
 - Reconstructed `create_game` from memory
 - Added explanatory comments
 - Checked out different parameters:
     - name: Type       # Expected type
     - name = value     # Default value
     - name: Type = x   # Expected type plus default value
+- Reconstructed imports in `routers/games.py` from memory
+- Reconstructed games router from memory 
+- Reconstructed games POST endpoint from memory
+- Reconstructed `create_game` inside `routers/games.py`
