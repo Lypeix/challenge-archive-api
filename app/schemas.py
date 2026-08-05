@@ -51,7 +51,6 @@ class GameUpdate(BaseModel): # defines how optional fields for partial game upda
 class GameResponse(GameBase): # defines what the server returns to the client
     model_config = ConfigDict(
         from_attributes=True, # allows Pydantic to read object attributes n convert them into JSON response schema
-        str_strip_whitespace=True
     )
 
     id: int

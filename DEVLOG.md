@@ -82,3 +82,4 @@
 - Reconstructed missing `GameBase` model field n validation pieces from memory
 - Reconstructed `GameCreate` model from memory
 - Reconstructed `GameUpdate` model from memory
+- Reconstructed `GameResponse` model from memory

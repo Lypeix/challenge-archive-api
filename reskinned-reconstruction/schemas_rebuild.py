@@ -49,3 +49,12 @@ class GameUpdate(BaseModel):
         le=2100
     )
 
+class GameResponse(GameBase): # describes the output that server will return to the client
+    model_config = ConfigDict(  
+        from_attributes=True, # lets Pydantic read attributes from objects like ORM models
+    )
+
+    id: int
+    created_at: datetime
+
+    
