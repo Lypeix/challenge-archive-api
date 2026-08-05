@@ -74,4 +74,4 @@
 - Split `README.md` into `README.md` n `ROADMAP.md`
 
 ## DAY 10 - 05.08.2026
-### SESSION 1 
+### SESSION 1 (18:57-x)
