@@ -22,10 +22,11 @@ Assisted by Codex 5.6 Sol
 ```text
 challenge-archive-api/
 |-- alembic/
-|   |-- versions/
 |   |-- env.py
 |   |-- README
-|   `-- script.py.mako
+|   |-- script.py.mako
+|   `-- versions/ 
+|   alembic.ini
 |-- app/
 |   |-- routers/
 |   |   |-- __init__.py

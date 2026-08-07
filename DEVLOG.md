@@ -96,3 +96,11 @@
 - Reconstructed games router from memory 
 - Reconstructed games POST endpoint from memory
 - Reconstructed `create_game` inside `routers/games.py`
+
+## DAY 11 - 06.08.2026
+- Updating and expanding the documentation of space-obeservatory-api
+
+## DAY 12 - 07.08.2026
+### SESSION 1 (16:50-x)
+- Fixed alembic folder structure
+- Updated structure tree in README
