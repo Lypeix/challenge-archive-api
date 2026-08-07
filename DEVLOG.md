@@ -101,10 +101,13 @@
 - Updating and expanding the documentation of space-obeservatory-api
 
 ## DAY 12 - 07.08.2026
-### SESSION 1 (16:50-x)
+### SESSION 1 (16:50-18:00)
 - Fixed alembic folder structure
 - Updated structure tree in README
 - String limits for title n genre in `models.py` now share the same value with `schemas.py` string limits
 - Fixed comment for what a session is in line 34 of `database.py`
 - Revised earlier material, for example ORM exists to map Python objects to database tables/rows n translate changes to mapped objects into the correct database operations
 - Implemented `get_games` n `get_game_by_id` to `crud.py`
+- Created `list_games` n `get_game_id` router endpoints to `games.py`
+- Raised HTTPException status code ERROR 404 for `get_game_id` incase there's no game with matching id
+- Successfully tested the new endpoints

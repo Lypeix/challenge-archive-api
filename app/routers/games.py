@@ -1,7 +1,7 @@
 from typing import Annotated # imports Python's ability to attach extra metadata to a type
                              # metadata means data describing other data or behavior
 
-from fastapi import APIRouter, Depends, status # APIRouter groups related endpoints
+from fastapi import APIRouter, Depends, HTTPException, status # APIRouter groups related endpoints
                                                # Depends tells FastAPI to get a value from another function
 
 from sqlalchemy.orm import Session
@@ -31,3 +31,29 @@ def create_game(
         session,
         game_data
     )
+
+@router.get(
+    "",
+    response_model=list[GameResponse]
+)
+def list_games(
+    session: Annotated[Session, Depends(get_db)]
+):
+    return crud.get_games(session)
+
+@router.get(
+    "/{game_id}",
+)
+def get_game_id(
+    game_id: int,
+    session: Annotated[Session, Depends(get_db)]
+):
+    game = crud.get_game_by_id(session, game_id)
+
+    if game is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Game not found"
+        )
+
+    return game

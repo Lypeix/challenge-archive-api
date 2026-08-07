@@ -18,8 +18,8 @@
 - [x] Create separate create, update, and response schemas
 - [x] Configure Pydantic `from_attributes=True`
 - [x] Add `POST /games`
-- [ ] Add `GET /games`
-- [ ] Add `GET /games/{game_id}`
+- [x] Add `GET /games`
+- [x] Add `GET /games/{game_id}`
 - [ ] Add `PATCH /games/{game_id}`
 - [ ] Add `DELETE /games/{game_id}`
 - [ ] Add pagination and title/genre filters
