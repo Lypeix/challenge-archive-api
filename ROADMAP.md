@@ -63,7 +63,7 @@
 
 ### Migrations
 
-- [x] Install and initialize Alembic
+- [ ] Install and initialize Alembic
 - [ ] Connect Alembic to SQLAlchemy metadata
 - [ ] Generate initial migration
 - [ ] Apply migration to a clean database

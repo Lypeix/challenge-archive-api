@@ -31,7 +31,7 @@ def enable_sqlite_foreign_keys(
 class Base(DeclarativeBase): # base becomes the parent class for every SQLAlchemy model
     pass 
 
-SessionLocal = sessionmaker( # creates sessions, aka. ORM equivalent of sqlite's cursor workflow (parser/communicator between server n sqlalchemy language)
+SessionLocal = sessionmaker( # creates sessions, which execute queries, tracks ORM objects n manages transactions 
     
     bind=engine, # every session made by Sessionlocal uses the previously configured engine
 

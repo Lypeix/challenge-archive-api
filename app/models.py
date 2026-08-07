@@ -16,13 +16,13 @@ class Game(Base):
     )
 
     title: Mapped[str] = mapped_column(
-        String(150), # defines db column as string text with max character length of 150
+        String(100), # defines db column as string text with max character length of 100
         nullable=False, # means db cannot store NULL in the title column (though pydantic is still helpful for validating stuff like whitespace-only string"
         index=True # tells SQLAlchemy to create idx for the title column
     )
 
     genre: Mapped[str] = mapped_column(
-        String(150),
+        String(50),
         nullable=False,
         index=True
     )
