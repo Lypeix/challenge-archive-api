@@ -108,6 +108,6 @@
 - Fixed comment for what a session is in line 34 of `database.py`
 - Revised earlier material, for example ORM exists to map Python objects to database tables/rows n translate changes to mapped objects into the correct database operations
 - Implemented `get_games` n `get_game_by_id` to `crud.py`
-- Created `list_games` n `get_game_id` router endpoints to `games.py`
+- Created `list_games` n `get_game_by_id` router endpoints to `games.py`
 - Raised HTTPException status code ERROR 404 for `get_game_by_id` incase there's no game with matching id
 - Successfully tested the new endpoints
