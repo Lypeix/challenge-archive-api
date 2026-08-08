@@ -53,10 +53,10 @@
 
 ### ORM Features
 
-- [ ] Use `session.add()`, `commit()`, `refresh()`, and `delete()`
-- [ ] Retrieve records with `session.get()`
-- [ ] Build queries with SQLAlchemy `select()`
-- [ ] Use `where()`, `offset()`, and `limit()`
+- [x] Use `session.add()`, `commit()`, `refresh()`, and `delete()`
+- [x] Retrieve records with `session.get()`
+- [x] Build queries with SQLAlchemy `select()`
+- [x] Use `where()`, `offset()`, and `limit()`
 - [ ] Load related records without unnecessary queries
 - [ ] Add aggregate statistics endpoint
 - [ ] Return completion rate and total attempt count
