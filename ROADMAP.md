@@ -23,7 +23,7 @@
 - [ ] Add `PATCH /games/{game_id}`
 - [ ] Add `DELETE /games/{game_id}`
 - [ ] Add pagination and title/genre filters
-- [ ] Return 404 for nonexistent games
+- [x] Return 404 for nonexistent games
 
 ### Challenges
 

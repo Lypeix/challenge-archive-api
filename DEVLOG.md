@@ -111,3 +111,7 @@
 - Created `list_games` n `get_game_by_id` router endpoints to `games.py`
 - Raised HTTPException status code ERROR 404 for `get_game_by_id` incase there's no game with matching id
 - Successfully tested the new endpoints
+
+## DAY 13 - 08.08.2026
+### SESSION 1 (10:44-x)
+- Implemented `update_game()` to `crud.py`

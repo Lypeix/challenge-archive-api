@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 from app import crud
 from app.database import get_db
-from app.schemas import GameCreate, GameResponse
+from app.schemas import GameCreate, GameResponse, GameUpdate
 
 router = APIRouter( # creates a router that groups game-related endpoints
     prefix="/games", # automatically places /games before every path made by this router, eg. "" in router.post means "/games"
@@ -42,7 +42,7 @@ def list_games(
     return crud.get_games(session)
 
 @router.get(
-    "/{game_id}",
+    "/{game_id}"
 )
 def get_game_id(
     game_id: int,
@@ -57,3 +57,6 @@ def get_game_id(
         )
 
     return game
+
+
+    
