@@ -58,5 +58,21 @@ def get_game_id(
 
     return game
 
+@router.patch(
+    "/{game_id}",
+    response_model=GameResponse
+)
+def update_game(
+    game_id: int,
+    game_data: GameUpdate,
+    session: Annotated[Session, Depends(get_db)]
+):
+    game = crud.get_game_by_id(session, game_id)
 
-    
+    if game is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Game not found"
+        )
+
+    return crud.update_game(session, game, game_data)

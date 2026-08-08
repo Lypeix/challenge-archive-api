@@ -115,3 +115,5 @@
 ## DAY 13 - 08.08.2026
 ### SESSION 1 (10:44-x)
 - Implemented `update_game()` to `crud.py`
+- Wired `update_game()` to PATCH endpoint in `games.py`
+- Successfuly tested whole sequence through SwaggerUI
