@@ -114,7 +114,7 @@
 - Successfully tested the new endpoints
 
 ## DAY 13 - 08.08.2026
-### SESSION 1 (10:44-x)
+### SESSION 1 (10:44-12:00)
 - Implemented `update_game()` to `crud.py`
 - Wired `update_game()` to the PATCH endpoint in `app/routers/games.py`
 - Successfuly tested whole sequence through SwaggerUI
@@ -122,3 +122,7 @@
 - Wired `delete_game()` to DELETE endpoint in `app/routers/games.py`
 - Tested the new endpoint through SwaggerUI
 - Polished earlier documentation
+- Created offset-based pagination in `get_games()`
+- Added validated `offset` and `limit` pagination to the `GET /games` endpoint in `app/routers/games.py`
+- Added title/genre filters to the `GET /games` endpoint in `app/routers/games.py`
+- Successfully tested pagination and filters through SwaggerUI

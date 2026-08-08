@@ -22,7 +22,7 @@
 - [x] Add `GET /games/{game_id}`
 - [x] Add `PATCH /games/{game_id}`
 - [x] Add `DELETE /games/{game_id}`
-- [ ] Add pagination and title/genre filters
+- [x] Add pagination and title/genre filters
 - [x] Return 404 for nonexistent games
 
 ### Challenges

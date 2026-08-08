@@ -5,6 +5,7 @@ from sqlalchemy import select
 from app.models import Game
 from app.schemas import GameCreate, GameUpdate
 
+
 def create_game(
     session: Session,
     game_data: GameCreate
@@ -19,12 +20,31 @@ def create_game(
 
     return game
 
+
 def get_games(
-    session: Session
+    session: Session,
+    title: str | None = None,
+    genre: str | None = None,
+    offset: int = 0,
+    limit: int = 20
+
 ) -> list[Game]:
+
+    if title is not None:
+        statement = statement.where(
+            Game.title.ilike(f"%{title}%")
+        )
+
+    if genre is not None:
+        statement = statement.where(
+            Game.genre.ilike(f"%{genre}%")
+        )
+
     statement = ( # the variable that stores db instructions below
         select(Game) # select basically means get/read
         .order_by(Game.id)
+        .offset(offset)
+        .limit(limit)
     )
 
     games = session.scalars(statement).all() # executes the statement n gives all selected game ORM objects
@@ -32,11 +52,13 @@ def get_games(
                                              # so I'd have to extract the value from row wrappers
     return list(games)
 
+
 def get_game_by_id(
     session: Session,
     game_id: int
 ) -> Game | None:
     return session.get(Game, game_id)
+
 
 def update_game(
     session: Session,
@@ -59,6 +81,7 @@ def update_game(
 
     return game
 
+
 def delete_game(
     session: Session,
     game: Game
@@ -66,4 +89,3 @@ def delete_game(
     session.delete(game),
     session.commit()
 
-    
