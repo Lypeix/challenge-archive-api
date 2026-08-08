@@ -58,3 +58,12 @@ def update_game(
     session.refresh(game)
 
     return game
+
+def delete_game(
+    session: Session,
+    game: Game
+) -> None:
+    session.delete(game),
+    session.commit()
+
+    

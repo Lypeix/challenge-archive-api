@@ -76,3 +76,23 @@ def update_game(
         )
 
     return crud.update_game(session, game, game_data)
+
+@router.delete(
+    "/{game_id}",
+    status_code=status.HTTP_204_NO_CONTENT
+)
+
+def delete_game(
+    game_id: int,
+    session: Annotated[Session, Depends(get_db)]
+) -> None:
+
+    game = crud.get_game_by_id(session, game_id)
+
+    if game is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Game not found"
+        )
+
+    crud.delete_game(session, game)

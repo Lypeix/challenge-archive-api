@@ -13,15 +13,15 @@
 ### SESSION 1 (19:55-21:01)
 - Created FastAPI app instance
 - Added app lifespan handler foundation
-- Added pathing to database.py
-- Created database URL
-- Configured SQLAlchemy engine in database.py
+- Added pathing to `database.py`
+- Created `database URL`
+- Configured SQLAlchemy engine in `database.py`
 - Added few comments
 - Implemented foreign keys
 - Established DeclarativeBase
 - Made session factory
-- Added get_db() yielding one session per request
-- Finished app lifespan handler in main.py
+- Added `get_db()` yielding one session per request
+- Finished app lifespan handler in `main.py`
 - Added more space between comments
 - Fixed typos
 
@@ -44,11 +44,11 @@
 
 ## DAY 5 - 31.07.2026
 ### SESSION 1 (15:53-16:57)
-- Imported required tech to models.py
-- Built class Game(Base) in models.py
+- Imported required tech to `models.py`
+- Built class Game(Base) in `models.py`
 - Added explanatory comments
-- Added guaranteed db cleanup w try/finally to app lifespan handler in main.py
-- Added GameBase, GameCreate, GameUpdate, GameResponse schemas to schemas.py
+- Added guaranteed db cleanup w try/finally to app lifespan handler in `main.py`
+- Added `GameBase`, `GameCreate`, `GameUpdate`, `GameResponse` schemas to `schemas.py`
 - Successfully tested the schemas in PowerShell
 - Created foundation for the Post endpoint
 
@@ -61,7 +61,7 @@
 - Reconstructed whole `models.py` as `models_reskin.py`
 - Explained the entire reconstruction with comments next to particular LOCs (lines of code, not sunglasses)
 - Refined n corrected earlier comments
-- Fixed some typos
+- Fixed typos
 
 ### SESSION 2 (22:12-22:54)
 - Created the `POST /games` endpoint in `games.py`
@@ -106,14 +106,19 @@
 - Updated structure tree in README
 - String limits for title n genre in `models.py` now share the same value with `schemas.py` string limits
 - Fixed comment for what a session is in line 34 of `database.py`
-- Revised earlier material, for example ORM exists to map Python objects to database tables/rows n translate changes to mapped objects into the correct database operations
+- Revised earlier material:
+    - for example ORM exists to map Python objects to database tables/rows n translate changes to mapped objects into the correct database operations
 - Implemented `get_games` n `get_game_by_id` to `crud.py`
-- Created `list_games` n `get_game_by_id` router endpoints to `games.py`
+- Created `list_games` n `get_game_by_id` router endpoints to `app/routers/games.py`
 - Raised HTTPException status code ERROR 404 for `get_game_by_id` incase there's no game with matching id
 - Successfully tested the new endpoints
 
 ## DAY 13 - 08.08.2026
 ### SESSION 1 (10:44-x)
 - Implemented `update_game()` to `crud.py`
-- Wired `update_game()` to PATCH endpoint in `games.py`
+- Wired `update_game()` to the PATCH endpoint in `app/routers/games.py`
 - Successfuly tested whole sequence through SwaggerUI
+- Implemented `delete_game()` to `crud.py`
+- Wired `delete_game()` to DELETE endpoint in `app/routers/games.py`
+- Tested the new endpoint through SwaggerUI
+- Polished earlier documentation
