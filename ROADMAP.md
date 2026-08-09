@@ -27,9 +27,9 @@
 
 ### Challenges
 
-- [ ] Create `Challenge` SQLAlchemy model
-- [ ] Add foreign key connecting challenges to games
-- [ ] Add `Game.challenges` and `Challenge.game` relationships
+- [x] Create `Challenge` SQLAlchemy model
+- [x] Add foreign key connecting challenges to games
+- [x] Add `Game.challenges` and `Challenge.game` relationships
 - [ ] Add challenge status and difficulty validation
 - [ ] Add `POST /games/{game_id}/challenges`
 - [ ] Add `GET /games/{game_id}/challenges`

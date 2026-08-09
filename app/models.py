@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from sqlalchemy import DateTime, String, func
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import DateTime, ForeignKey, String, Text, func
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database import Base
 
@@ -35,4 +35,61 @@ class Game(Base):
         DateTime(timezone=True),
         server_default=func.now(),
         nullable=False
+    )
+
+    challenges: Mapped[list["Challenge"]] = relationship( # creates challenges attributes for games (games.challenges), it contains Challenge objects for particular game
+        back_populates="game",
+        cascade="all, delete-orphan",
+        passive_deletes=True
+    )
+
+
+class Challenge(Base):
+    __tablename__ = "challenges"
+
+    id: Mapped[int] = mapped_column(
+        primary_key=True
+    )
+
+    game_id: Mapped[int] = mapped_column(
+        ForeignKey(
+            "games.id",
+            ondelete="CASCADE"
+        ),
+        nullable=False,
+        index=True
+    )
+
+    title: Mapped[str] = mapped_column(
+        String(150),
+        nullable=False
+    )
+
+    rules: Mapped[str] = mapped_column(
+        Text,
+        nullable=False
+    )
+
+    status: Mapped[str] = mapped_column(
+        String(30),
+        nullable=False,
+        default="planned",
+        server_default="planned",
+        index=True
+    )
+
+    difficulty: Mapped[str] = mapped_column(
+        String(30),
+        nullable=False,
+        index=True
+    )
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False
+    )
+
+    game: Mapped["Game"] = relationship(
+        back_populates="challenges"
     )

@@ -126,3 +126,8 @@
 - Added validated `offset` and `limit` pagination to the `GET /games` endpoint in `app/routers/games.py`
 - Added title/genre filters to the `GET /games` endpoint in `app/routers/games.py`
 - Successfully tested pagination and filters through SwaggerUI
+
+## DAY 14 - 09.08.2026
+### SESSION 1 (15:18-15:41)
+- Created `Challenge(Base)` model in `models.py`
+- Created `Game.challanges` and `Challenge.game` relationships in `models.py`
