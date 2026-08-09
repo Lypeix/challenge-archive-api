@@ -30,6 +30,13 @@ def get_games(
 
 ) -> list[Game]:
 
+    statement = ( # the variable that stores db instructions below
+        select(Game) # select basically means get/read
+        .order_by(Game.id)
+        .offset(offset)
+        .limit(limit)
+    )
+
     if title is not None:
         statement = statement.where(
             Game.title.ilike(f"%{title}%")
@@ -39,13 +46,6 @@ def get_games(
         statement = statement.where(
             Game.genre.ilike(f"%{genre}%")
         )
-
-    statement = ( # the variable that stores db instructions below
-        select(Game) # select basically means get/read
-        .order_by(Game.id)
-        .offset(offset)
-        .limit(limit)
-    )
 
     games = session.scalars(statement).all() # executes the statement n gives all selected game ORM objects
                                              # without scalars, SQLAlchemy would return a row containing selected value instead of value itself, 
@@ -86,6 +86,6 @@ def delete_game(
     session: Session,
     game: Game
 ) -> None:
-    session.delete(game),
+    session.delete(game)
     session.commit()
 
