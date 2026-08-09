@@ -131,3 +131,8 @@
 ### SESSION 1 (15:18-15:41)
 - Created `Challenge(Base)` model in `models.py`
 - Created `Game.challanges` and `Challenge.game` relationships in `models.py`
+
+### SESSION 2 (22:42-22:54)
+- Debugged `statement` in `crud.py`
+- Added`response_model=GameResponse` to the single-game endpoint in `games.py` 
+- Updated optional list-games query parameters in `games.py` to say str | None instead of str

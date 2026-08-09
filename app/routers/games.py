@@ -38,15 +38,16 @@ def create_game(
 )
 def list_games(
     session: Annotated[Session, Depends(get_db)],
-    title: Annotated[str, Query(min_length=1, max_length=100)] = None,
-    genre: Annotated[str, Query(min_length=1, max_length=50)] = None,
+    title: Annotated[str | None, Query(min_length=1, max_length=100)] = None,
+    genre: Annotated[str | None, Query(min_length=1, max_length=50)] = None,
     offset: Annotated[int, Query(ge=0)] = 0,
     limit: Annotated[int, Query(ge=1, le=100)] = 20
 ):
     return crud.get_games(session, title=title, genre=genre, offset=offset, limit=limit)
 
 @router.get(
-    "/{game_id}"
+    "/{game_id}",
+    response_model=GameResponse
 )
 def get_game_id(
     game_id: int,
