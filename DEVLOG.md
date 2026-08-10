@@ -136,3 +136,6 @@
 - Debugged `statement` in `crud.py`
 - Added`response_model=GameResponse` to the single-game endpoint in `games.py` 
 - Updated optional list-games query parameters in `games.py` to say str | None instead of str
+
+## DAY 15 - 10.08.2026
+### SESSION 1 (09:19-X)

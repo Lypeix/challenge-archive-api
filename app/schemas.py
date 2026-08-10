@@ -55,3 +55,4 @@ class GameResponse(GameBase): # defines what the server returns to the client
 
     id: int
     created_at: datetime
+
