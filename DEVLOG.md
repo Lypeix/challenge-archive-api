@@ -139,3 +139,5 @@
 
 ## DAY 15 - 10.08.2026
 ### SESSION 1 (09:19-X)
+- Implemented challenge status n difficulty validation in `schemas.py`
+- Created `ChallengeStatus`, `ChallengeDifficulty`, `ChallengeBase`, `ChallengeCreate`, `ChallengeUpdate`, `ChallengeResponse` inside `schemas.py`
