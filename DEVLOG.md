@@ -146,3 +146,5 @@
 - Wired challenge creation to `POST /games/{game_id}/challenges`
 - Prevented challenges from referencing non-existent games
 - Successfully tested the creations, 422 and 404 responses, and Pydantic validation through SwaggerUI
+
+### SESSION 2 (12:36-x)
