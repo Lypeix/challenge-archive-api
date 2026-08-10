@@ -148,3 +148,4 @@
 - Successfully tested the creations, 422 and 404 responses, and Pydantic validation through SwaggerUI
 
 ### SESSION 2 (12:36-x)
+- Constructed `list_challenges` in `crud.py`

@@ -105,3 +105,38 @@ def create_challenge(
     session.refresh(challenge)
 
     return challenge
+
+def list_challenges(
+    session: Session,
+    game: Game,
+    status: str | None = None,
+    difficulty: str | None = None,
+    offset: int = 0,
+    limit: int = 10
+) -> list[Challenge]:
+
+    statement = (
+        select(Challenge)
+        .where(Challenge.game_id == game.id)
+)
+
+    if status is not None:
+        statement = statement.where(
+            Challenge.status == status
+        )
+
+    if difficulty is not None:
+        statement = statement.where(
+            Challenge.difficulty == difficulty
+        )
+
+    statement = (
+        statement
+        .order_by(Challenge.id)
+        .offset(offset)
+        .limit(limit)
+    )
+
+    challenges = session.scalars(statement).all()
+
+    return list(challenges)

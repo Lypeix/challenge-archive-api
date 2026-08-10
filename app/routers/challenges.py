@@ -31,4 +31,9 @@ def challenge_create(
         )
 
     return crud.create_challenge(session, game, challenge_data)
+
+@router.get(
+    "/games/{game_id}",
+    response_model=ChallengeResponse
+)
     
