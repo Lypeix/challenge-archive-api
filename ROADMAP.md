@@ -31,13 +31,13 @@
 - [x] Add foreign key connecting challenges to games
 - [x] Add `Game.challenges` and `Challenge.game` relationships
 - [x] Add challenge status and difficulty validation
-- [ ] Add `POST /games/{game_id}/challenges`
+- [x] Add `POST /games/{game_id}/challenges`
 - [ ] Add `GET /games/{game_id}/challenges`
 - [ ] Add `GET /challenges/{challenge_id}`
 - [ ] Add `PATCH /challenges/{challenge_id}`
 - [ ] Add `DELETE /challenges/{challenge_id}`
 - [ ] Filter challenges by status and difficulty
-- [ ] Prevent challenges from referencing nonexistent games
+- [x] Prevent challenges from referencing nonexistent games
 
 ### Attempts
 

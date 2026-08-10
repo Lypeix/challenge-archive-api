@@ -138,6 +138,11 @@
 - Updated optional list-games query parameters in `games.py` to say str | None instead of str
 
 ## DAY 15 - 10.08.2026
-### SESSION 1 (09:19-X)
-- Implemented challenge status n difficulty validation in `schemas.py`
-- Created `ChallengeStatus`, `ChallengeDifficulty`, `ChallengeBase`, `ChallengeCreate`, `ChallengeUpdate`, `ChallengeResponse` inside `schemas.py`
+### SESSION 1 (09:19-10:05)
+- Added challenge status and difficulty validation in `schemas.py`
+- Created `ChallengeStatus`, `ChallengeDifficulty` string enums
+- Created `ChallengeBase`, `ChallengeCreate`, `ChallengeUpdate`, `ChallengeResponse` inside `schemas.py`
+- Implemented `create_challenge()` in `crud.py`
+- Wired challenge creation to `POST /games/{game_id}/challenges`
+- Prevented challenges from referencing non-existent games
+- Successfully tested the creations, 422 and 404 responses, and Pydantic validation through SwaggerUI

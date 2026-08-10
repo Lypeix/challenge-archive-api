@@ -2,8 +2,8 @@ from sqlalchemy.orm import Session
 
 from sqlalchemy import select 
 
-from app.models import Game
-from app.schemas import GameCreate, GameUpdate
+from app.models import Game, Challenge
+from app.schemas import GameCreate, GameUpdate, ChallengeCreate, ChallengeUpdate
 
 
 def create_game(
@@ -89,3 +89,19 @@ def delete_game(
     session.delete(game)
     session.commit()
 
+
+def create_challenge(
+    session: Session,
+    game: Game,
+    challenge_data: ChallengeCreate
+) -> Challenge:
+    challenge = Challenge(
+        game=game, # assigns the relationship, SQLAlchemy gets the parent id n fills challenge.game_id when saving
+        **challenge_data.model_dump(mode="json")
+    )
+
+    session.add(challenge) 
+    session.commit()
+    session.refresh(challenge)
+
+    return challenge

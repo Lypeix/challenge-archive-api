@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 
 from app.database import Base, engine
-from app.routers import games
+from app.routers import games, challenges
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -23,3 +23,4 @@ app = FastAPI(
 )
 
 app.include_router(games.router)
+app.include_router(challenges.router)
