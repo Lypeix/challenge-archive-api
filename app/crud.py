@@ -130,7 +130,7 @@ def list_challenges(
             Challenge.difficulty == difficulty
         )
 
-    statement = (
+    statement = ( # query
         statement
         .order_by(Challenge.id)
         .offset(offset)

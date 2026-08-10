@@ -147,5 +147,10 @@
 - Prevented challenges from referencing non-existent games
 - Successfully tested the creations, 422 and 404 responses, and Pydantic validation through SwaggerUI
 
-### SESSION 2 (12:36-x)
+### SESSION 2 (12:36-13:35)
 - Constructed `list_challenges` in `crud.py`
+- Added `GET /games/{game_id}/challenges`
+- Added filtering by challenge status and difficulty
+- Verified parent-game isolation
+- Successfuly tested listing, filtering and status codes through SwaggerUI
+- Reviewed relational SQLAlchemy queries

@@ -32,11 +32,11 @@
 - [x] Add `Game.challenges` and `Challenge.game` relationships
 - [x] Add challenge status and difficulty validation
 - [x] Add `POST /games/{game_id}/challenges`
-- [ ] Add `GET /games/{game_id}/challenges`
+- [x] Add `GET /games/{game_id}/challenges`
 - [ ] Add `GET /challenges/{challenge_id}`
 - [ ] Add `PATCH /challenges/{challenge_id}`
 - [ ] Add `DELETE /challenges/{challenge_id}`
-- [ ] Filter challenges by status and difficulty
+- [x] Filter challenges by status and difficulty
 - [x] Prevent challenges from referencing nonexistent games
 
 ### Attempts
