@@ -142,7 +142,10 @@ def list_challenges(
     return list(challenges)
 
 def get_challenge_by_id(
-    session: Session,
-    challenge_id: int
+        session: Session,
+        challenge_id: int
 ) -> Challenge | None:
-    return session()
+    return session.get(
+        Challenge,
+        challenge_id
+    )

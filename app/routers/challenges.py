@@ -63,3 +63,26 @@ def list_challenges(
         status=challenge_status, 
         difficulty=challenge_difficulty
         )
+
+@router.get(
+    "/challenges/{challenge_id}",
+    response_model=ChallengeResponse
+) 
+
+def get_challenge_by_id(
+    challenge_id: int,
+    session: Annotated[Session, Depends(get_db)]
+):
+
+    challenge = crud.get_challenge_by_id(
+        session,
+        challenge_id
+    )
+
+    if challenge is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Challenge not found"
+        )
+
+    return challenge
