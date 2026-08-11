@@ -154,3 +154,6 @@
 - Verified parent-game isolation
 - Successfuly tested listing, filtering and status codes through SwaggerUI
 - Reviewed relational SQLAlchemy queries
+
+## DAY 16 - 11.08.2026
+### SESSION 1 (17:51-X)
