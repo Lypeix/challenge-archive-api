@@ -149,3 +149,23 @@ def get_challenge_by_id(
         Challenge,
         challenge_id
     )
+
+
+def update_challenge(
+    session: Session,
+    challenge: Challenge,
+    challenge_data: ChallengeUpdate
+) -> Challenge:
+    update_data = challenge_data.model_dump(
+        mode="json",
+        exclude_unset=True,
+        exclude_none=True
+    )
+
+    for field_name, new_value in update_data.items():
+        setattr(challenge, field_name, new_value)
+
+    session.commit()
+    session.refresh(challenge)
+
+    return challenge

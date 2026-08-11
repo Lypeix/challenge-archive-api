@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from app import crud
 from app.database import get_db
-from app.schemas import ChallengeCreate, ChallengeDifficulty, ChallengeStatus, ChallengeResponse
+from app.schemas import ChallengeCreate, ChallengeDifficulty, ChallengeUpdate, ChallengeStatus, ChallengeResponse
 
 router = APIRouter(
     tags=["Challenges"]
@@ -86,3 +86,28 @@ def get_challenge_by_id(
         )
 
     return challenge
+
+@router.patch(
+    "/challenges/{challenge_id}",
+    response_model=ChallengeResponse
+)
+
+def update_challenge(
+    session: Annotated[Session, Depends(get_db)],
+    challenge_data: ChallengeUpdate,
+    challenge_id: int
+):
+
+    challenge = crud.get_challenge_by_id(session, challenge_id)
+
+    if challenge is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Challenge not found"
+        )
+
+    return crud.update_challenge(
+        session,
+        challenge,
+        challenge_data
+    )
