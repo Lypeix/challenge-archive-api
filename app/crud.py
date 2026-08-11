@@ -169,3 +169,11 @@ def update_challenge(
     session.refresh(challenge)
 
     return challenge
+
+def delete_challenge(
+    session: Session,
+    challenge: Challenge
+) -> None:
+    session.delete(challenge)
+    session.commit()
+

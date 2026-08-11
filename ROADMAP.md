@@ -35,7 +35,7 @@
 - [x] Add `GET /games/{game_id}/challenges`
 - [x] Add `GET /challenges/{challenge_id}`
 - [x] Add `PATCH /challenges/{challenge_id}`
-- [ ] Add `DELETE /challenges/{challenge_id}`
+- [x] Add `DELETE /challenges/{challenge_id}`
 - [x] Filter challenges by status and difficulty
 - [x] Prevent challenges from referencing nonexistent games
 

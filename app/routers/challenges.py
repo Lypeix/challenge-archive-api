@@ -93,9 +93,9 @@ def get_challenge_by_id(
 )
 
 def update_challenge(
-    session: Annotated[Session, Depends(get_db)],
+    challenge_id: int,
     challenge_data: ChallengeUpdate,
-    challenge_id: int
+    session: Annotated[Session, Depends(get_db)]
 ):
 
     challenge = crud.get_challenge_by_id(session, challenge_id)
@@ -111,3 +111,24 @@ def update_challenge(
         challenge,
         challenge_data
     )
+
+@router.delete(
+    "/challenges/{challenge_id}",
+    status_code=status.HTTP_204_NO_CONTENT
+)
+
+def delete_challenge(
+    challenge_id: int,
+    session: Annotated[Session, Depends(get_db)]
+) -> None:
+    challenge = crud.get_challenge_by_id(
+        session, 
+        challenge_id)
+
+    if challenge is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Challenge not found"
+        )
+
+    crud.delete_challenge(session, challenge)
