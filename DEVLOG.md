@@ -156,7 +156,7 @@
 - Reviewed relational SQLAlchemy queries
 
 ## DAY 16 - 11.08.2026
-### SESSION 1 (17:51-18:41)
+### SESSION 1 (17:51-18:44)
 - Added `get_challenge_by_id` to `crud.py`
 - Wired `get_challenge_by_id` to `GET /challenges/{challenge_id}`
 - Added `update_challenge` to `crud.py`
