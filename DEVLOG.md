@@ -165,3 +165,6 @@
 - Wired `delete_challenge` to `DELETE /challenges/{challenge_id}` 
 - Added 404 handling for missing challenges
 - Tested GET, PATCH n DELETE workflows through SwaggerUI
+
+## DAY 17 - 12.08.2026
+### BREAK DAY
