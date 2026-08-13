@@ -170,7 +170,7 @@
 ### BREAK DAY
 
 ## DAY 18 - 13.08.2026
-### SESSION 1 (15:10-15:32)
+### SESSION 1 (15:10-15:38)
 - [x] Create `Attempt` SQLAlchemy model
 - [x] Connect attempts to challenges through a foreign key
 - [x] Configure challenge-attempt relationships
