@@ -170,4 +170,8 @@
 ### BREAK DAY
 
 ## DAY 18 - 13.08.2026
-### SESSION 1 (15:10-X)
+### SESSION 1 (15:10-15:32)
+- [x] Create `Attempt` SQLAlchemy model
+- [x] Connect attempts to challenges through a foreign key
+- [x] Configure challenge-attempt relationships
+- [x] Record result, duration, death count, notes, and timestamp

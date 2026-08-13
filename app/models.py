@@ -93,3 +93,60 @@ class Challenge(Base):
     game: Mapped["Game"] = relationship(
         back_populates="challenges"
     )
+
+    attempts: Mapped[list["Attempt"]] = relationship(
+        back_populates="challenge",
+        cascade="all, delete-orphan",
+        passive_deletes=True
+    )
+
+class Attempt(Base):
+    __tablename__ = "attempts"
+
+    id: Mapped[int] = mapped_column(
+        primary_key=True 
+    )
+
+    challenge_id: Mapped[int] = mapped_column(
+        ForeignKey(
+            "challenges.id",
+            ondelete="CASCADE"
+            ),
+            nullable=False,
+            index=True
+        )
+
+
+    result: Mapped[str] = mapped_column(
+        String(30),
+        nullable=False,
+    )
+
+
+    duration_minutes: Mapped[int] = mapped_column(
+        nullable=False
+    )
+
+
+    death_count: Mapped[int] = mapped_column(
+        nullable=False,
+        default=0,
+        server_default="0"
+    )
+
+
+    notes: Mapped[str | None] = mapped_column(
+        Text,
+        nullable=True
+    )
+
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False
+    )
+
+    challenge: Mapped["Challenge"] = relationship(
+        back_populates="attempts"
+    )

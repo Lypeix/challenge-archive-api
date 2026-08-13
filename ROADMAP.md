@@ -41,14 +41,14 @@
 
 ### Attempts
 
-- [ ] Create `Attempt` SQLAlchemy model
-- [ ] Connect attempts to challenges through a foreign key
-- [ ] Configure challenge-attempt relationships
+- [x] Create `Attempt` SQLAlchemy model
+- [x] Connect attempts to challenges through a foreign key
+- [x] Configure challenge-attempt relationships
 - [ ] Add `POST /challenges/{challenge_id}/attempts`
 - [ ] Add `GET /challenges/{challenge_id}/attempts`
 - [ ] Add `PATCH /attempts/{attempt_id}`
 - [ ] Add `DELETE /attempts/{attempt_id}`
-- [ ] Record result, duration, death count, notes, and timestamp
+- [x] Record result, duration, death count, notes, and timestamp
 - [ ] Configure and verify cascade deletion
 
 ### ORM Features
