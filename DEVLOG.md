@@ -182,4 +182,6 @@
 - Fixed: 
     - death_count in AttemptUpdate now features default=None instead of default=0, because it's update schema, so it should not force zero death as default like create schema does
     - missing default=None to duration_minutes in the update schema
-    - missing | None to notes in AttemptBase, because notes is a optional field, therefore returning None is an otpion
+    - missing | None to notes in AttemptBase, because notes is a optional field, therefore returning None is an option
+- Added `create_attempt` to `crud.py`
+- Wired `create_attempt` to `POST /challenges/{challenge_id}/attempts`

@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select 
 
 from app.models import Game, Challenge, Attempt
-from app.schemas import GameCreate, GameUpdate, ChallengeCreate, ChallengeUpdate
+from app.schemas import GameCreate, GameUpdate, ChallengeCreate, ChallengeUpdate, AttemptCreate, AttemptUpdate
 
 
 def create_game(
@@ -184,4 +184,17 @@ def delete_challenge(
 def create_attempt(
     session: Session,
     challenge: Challenge,
-)
+    attempt_data: AttemptCreate
+) -> Attempt:
+
+    attempt = Attempt(
+        challenge=challenge, # estabilishes the ORM relationship
+        **attempt_data.model_dump(mode="json")
+    )
+
+    session.add(attempt)
+    session.commit()
+    session.refresh
+
+    return attempt
+
