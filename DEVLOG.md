@@ -191,7 +191,9 @@
 - Added `list_attempts` to `crud.py`
 - Wired `list_attempts` to `GET /challenges/{challenge_id}/attempts`
 
-### SESSION 2 (14:25-x)
+### SESSION 2 (14:25-14:51)
 - Added `get_attempt_by_id` to `crud.py`
 - Added `update_attempt` to `crud.py`
 - Added `delete_attempt` to `crud.py`
+- Wired `update_attempt` to `PATCH /challenges/{challenge_id}/attempts`
+- Wired `delete_attempt` to `Delete /challenges/{challenge_id}/attempts`

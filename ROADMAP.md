@@ -47,8 +47,8 @@
 - [x] Create Pydantic schemas for Attempts
 - [x] Add `POST /challenges/{challenge_id}/attempts`
 - [x] Add `GET /challenges/{challenge_id}/attempts`
-- [ ] Add `PATCH /attempts/{attempt_id}`
-- [ ] Add `DELETE /attempts/{attempt_id}`
+- [x] Add `PATCH /attempts/{attempt_id}`
+- [x] Add `DELETE /attempts/{attempt_id}`
 - [x] Record result, duration, death count, notes, and timestamp
 - [x] Configure and verify cascade deletion
 
