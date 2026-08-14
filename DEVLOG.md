@@ -175,3 +175,6 @@
 - [x] Connect attempts to challenges through a foreign key
 - [x] Configure challenge-attempt relationships
 - [x] Record result, duration, death count, notes, and timestamp
+
+## DAY 19 - 14.08.2026
+### SESSION 1 (08:46-X)
