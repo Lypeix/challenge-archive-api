@@ -50,7 +50,7 @@
 - [ ] Add `PATCH /attempts/{attempt_id}`
 - [ ] Add `DELETE /attempts/{attempt_id}`
 - [x] Record result, duration, death count, notes, and timestamp
-- [ ] Configure and verify cascade deletion
+- [x] Configure and verify cascade deletion
 
 ### ORM Features
 

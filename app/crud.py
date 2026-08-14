@@ -198,6 +198,7 @@ def create_attempt(
 
     return attempt
 
+
 def list_attempts(
     session: Session,
     challenge: Challenge
@@ -213,3 +214,40 @@ def list_attempts(
     return list(attempts)
 
 
+def get_attempt_by_id(
+    session: Session,
+    attempt_id: int
+) -> Attempt | None:
+
+    return session.get(
+        Attempt,
+        attempt_id
+    )
+
+
+def update_attempt(
+    session: Session,
+    attempt: Attempt,
+    attempt_data: AttemptUpdate
+) -> Attempt:
+
+    update_data = attempt_data.model_dump(
+        mode="json",
+        exclude_unset=True,
+        exclude_none=True
+    )
+
+    for field_name, new_value in update_data.items():
+        setattr(attempt, field_name, new_value)
+
+    session.commit()
+    session.refresh(attempt)
+
+    return attempt
+
+def delete_attempt(
+    session: Session,
+    attempt: Attempt
+) -> None:
+    session.delete(attempt)
+    session.commit()
