@@ -178,3 +178,4 @@
 
 ## DAY 19 - 14.08.2026
 ### SESSION 1 (08:46-X)
+- Added `AttemptResult`, `AttemptBase`, `AttemptCreate`, `AttemptUpdate`, `AttemptResponse` Pydantic schemas to `schemas.py`

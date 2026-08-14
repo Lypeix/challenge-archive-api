@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from sqlalchemy import select 
 
-from app.models import Game, Challenge
+from app.models import Game, Challenge, Attempt
 from app.schemas import GameCreate, GameUpdate, ChallengeCreate, ChallengeUpdate
 
 
@@ -106,6 +106,7 @@ def create_challenge(
 
     return challenge
 
+
 def list_challenges(
     session: Session,
     game: Game,
@@ -141,6 +142,7 @@ def list_challenges(
 
     return list(challenges)
 
+
 def get_challenge_by_id(
         session: Session,
         challenge_id: int
@@ -170,6 +172,7 @@ def update_challenge(
 
     return challenge
 
+
 def delete_challenge(
     session: Session,
     challenge: Challenge
@@ -177,3 +180,8 @@ def delete_challenge(
     session.delete(challenge)
     session.commit()
 
+
+def create_attempt(
+    session: Session,
+    challenge: Challenge,
+)

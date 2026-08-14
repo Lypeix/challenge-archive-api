@@ -129,8 +129,67 @@ class ChallengeResponse(ChallengeBase): # must inherit from ChallengeBase, other
     created_at: datetime
 
     
+class AttemptResult(StrEnum):
+    PROGRESSED = "progressed"    
+    COMPLETED = "completed"
 
 
+class AttemptBase(BaseModel):
+    model_config = ConfigDict(
+        str_strip_whitespace=True
+    )
+
+    result: AttemptResult
+
+    duration_minutes: int = Field(
+        ge=0
+    )
 
 
-    
+    death_count: int = Field(
+        default=0,
+        ge=0
+    )
+
+    notes: str = Field(
+        default=None,
+        max_length=2000
+    )
+
+
+class AttemptCreate(AttemptBase): # provides clean place for future create-only fields
+    pass
+
+
+class AttemptUpdate(BaseModel):
+    model_config = ConfigDict(
+        str_strip_whitespace=True
+    )
+
+    result: AttemptResult | None = None 
+
+    duration_minutes: int | None = Field(
+        ge=0
+    )
+
+
+    death_count: int | None = Field(
+        default=0,
+        ge=0
+    )
+
+    notes: str | None = Field(
+        default=None,
+        max_length=2000
+    )
+
+
+class AttemptResponse(AttemptBase):
+    model_config = ConfigDict(
+        from_attributes=True,
+        str_strip_whitespace=True
+    )
+
+    id: int
+    challenge_id: int
+    created_at: datetime
