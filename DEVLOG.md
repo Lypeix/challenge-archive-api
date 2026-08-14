@@ -187,3 +187,6 @@
 - Wired `create_attempt` to `POST /challenges/{challenge_id}/attempts`
 - Removed redundant FastAPI import
 - Registered the attempts router in `main.py`
+- Note: I need refreshment for nearly every single object, but the knowledge returns pretty fast upon reconstruction and short explanations
+- Added `list_attempts` to `crud.py`
+- Wired `list_attempts` to `GET /challenges/{challenge_id}/attempts`

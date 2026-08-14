@@ -198,3 +198,18 @@ def create_attempt(
 
     return attempt
 
+def list_attempts(
+    session: Session,
+    challenge: Challenge
+) -> list[Attempt]:
+    statement = (
+        select(Attempt)
+        .where(Attempt.challenge_id == challenge.id)
+        .order_by(Attempt.id)
+    )
+
+    attempts = session.scalars(statement).all() # orders results by attempt_id in ascending order
+
+    return list(attempts)
+
+
