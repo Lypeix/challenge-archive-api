@@ -190,3 +190,5 @@
 - Note: I need refreshment for nearly every single object, but the knowledge returns pretty fast upon reconstruction and short explanations
 - Added `list_attempts` to `crud.py`
 - Wired `list_attempts` to `GET /challenges/{challenge_id}/attempts`
+
+### SESSION 2 (14:25-x)
