@@ -186,3 +186,4 @@
 - Added `create_attempt` to `crud.py`
 - Wired `create_attempt` to `POST /challenges/{challenge_id}/attempts`
 - Removed redundant FastAPI import
+- Registered the attempts router in `main.py`
