@@ -185,3 +185,4 @@
     - missing | None to notes in AttemptBase, because notes is a optional field, therefore returning None is an option
 - Added `create_attempt` to `crud.py`
 - Wired `create_attempt` to `POST /challenges/{challenge_id}/attempts`
+- Removed redundant FastAPI import

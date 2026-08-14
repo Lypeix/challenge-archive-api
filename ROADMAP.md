@@ -45,7 +45,7 @@
 - [x] Connect attempts to challenges through a foreign key
 - [x] Configure challenge-attempt relationships
 - [x] Create Pydantic schemas for Attempts
-- [ ] Add `POST /challenges/{challenge_id}/attempts`
+- [x] Add `POST /challenges/{challenge_id}/attempts`
 - [ ] Add `GET /challenges/{challenge_id}/attempts`
 - [ ] Add `PATCH /attempts/{attempt_id}`
 - [ ] Add `DELETE /attempts/{attempt_id}`
