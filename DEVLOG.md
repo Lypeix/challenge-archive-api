@@ -179,3 +179,7 @@
 ## DAY 19 - 14.08.2026
 ### SESSION 1 (08:46-X)
 - Added `AttemptResult`, `AttemptBase`, `AttemptCreate`, `AttemptUpdate`, `AttemptResponse` Pydantic schemas to `schemas.py`
+- Fixed: 
+    - death_count in AttemptUpdate now features default=None instead of default=0, because it's update schema, so it should not force zero death as default like create schema does
+    - missing default=None to duration_minutes in the update schema
+    - missing | None to notes in AttemptBase, because notes is a optional field, therefore returning None is an otpion

@@ -151,7 +151,7 @@ class AttemptBase(BaseModel):
         ge=0
     )
 
-    notes: str = Field(
+    notes: str | None = Field(
         default=None,
         max_length=2000
     )
@@ -169,12 +169,13 @@ class AttemptUpdate(BaseModel):
     result: AttemptResult | None = None 
 
     duration_minutes: int | None = Field(
+        default=None,
         ge=0
     )
 
 
     death_count: int | None = Field(
-        default=0,
+        default=None,
         ge=0
     )
 
