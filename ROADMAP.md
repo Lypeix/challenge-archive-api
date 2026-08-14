@@ -52,43 +52,29 @@
 - [x] Record result, duration, death count, notes, and timestamp
 - [x] Configure and verify cascade deletion
 
-### ORM Features
+### Statistics
 
-- [x] Use `session.add()`, `commit()`, `refresh()`, and `delete()`
-- [x] Retrieve records with `session.get()`
-- [x] Build queries with SQLAlchemy `select()`
-- [x] Use `where()`, `offset()`, and `limit()`
-- [ ] Load related records without unnecessary queries
-- [ ] Add aggregate statistics endpoint
-- [ ] Return completion rate and total attempt count
+- [ ] Add statistics endpoint returning total attempts and completion rate
+- [ ] Test statistics calculations
 
 ### Migrations
 
-- [ ] Install and initialize Alembic
+- [x] Install and initialize Alembic
 - [ ] Connect Alembic to SQLAlchemy metadata
-- [ ] Generate initial migration
-- [ ] Apply migration to a clean database
-- [ ] Replace development `create_all()` with migrations
+- [ ] Generate and apply initial migration to a clean database
+- [ ] Remove development `create_all()`
 - [ ] Document migration commands
 
 ### Testing
 
-- [ ] Create isolated SQLAlchemy test engine
-- [ ] Override FastAPI `get_db()` dependency during tests
+- [ ] Create isolated test database and override `get_db()`
 - [ ] Test successful game CRUD
 - [ ] Test challenge and attempt relationships
 - [ ] Test cascade deletion
 - [ ] Test filters and pagination
-- [ ] Test 404 responses
-- [ ] Test Pydantic 422 responses
-- [ ] Test statistics calculations
+- [ ] Test representative `404` and `422` responses
 
 ### Documentation
 
-- [ ] Add installation and startup instructions
-- [ ] Add database migration instructions
-- [ ] Add endpoint examples
-- [ ] Add project structure
-- [ ] Add architecture explanation
-- [ ] Document known limitations
+- [ ] Complete README with setup, migration, architecture, examples, and limitations
 - [ ] Complete development log

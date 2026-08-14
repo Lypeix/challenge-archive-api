@@ -197,3 +197,5 @@
 - Added `delete_attempt` to `crud.py`
 - Wired `update_attempt` to `PATCH /challenges/{challenge_id}/attempts`
 - Wired `delete_attempt` to `Delete /challenges/{challenge_id}/attempts`
+
+### Tightened the roadmap by removing remaining low-value bulletpoints
