@@ -177,7 +177,7 @@
 - [x] Record result, duration, death count, notes, and timestamp
 
 ## DAY 19 - 14.08.2026
-### SESSION 1 (08:46-X)
+### SESSION 1 (08:46-10:07)
 - Added `AttemptResult`, `AttemptBase`, `AttemptCreate`, `AttemptUpdate`, `AttemptResponse` Pydantic schemas to `schemas.py`
 - Fixed: 
     - death_count in AttemptUpdate now features default=None instead of default=0, because it's update schema, so it should not force zero death as default like create schema does
