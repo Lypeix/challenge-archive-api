@@ -199,3 +199,6 @@
 - Wired `delete_attempt` to `Delete /challenges/{challenge_id}/attempts`
 
 ### Tightened the roadmap by removing remaining low-value bulletpoints
+
+## DAY 20 - 15.08.2026
+### BREAK DAY
