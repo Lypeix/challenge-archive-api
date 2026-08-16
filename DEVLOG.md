@@ -204,4 +204,7 @@
 ### BREAK DAY
 
 ## DAY 21 - 16.08.2026
-### SESSION 1 (20:20-X)
+### SESSION 1 (20:20-20:37)
+- Deleted statistics section from the roadmap due to redundancy and low learning value. 
+- Initialized alembic
+- Connected Alembic to SQLAlchemy metadata

@@ -52,15 +52,10 @@
 - [x] Record result, duration, death count, notes, and timestamp
 - [x] Configure and verify cascade deletion
 
-### Statistics
-
-- [ ] Add statistics endpoint returning total attempts and completion rate
-- [ ] Test statistics calculations
-
 ### Migrations
 
 - [x] Install and initialize Alembic
-- [ ] Connect Alembic to SQLAlchemy metadata
+- [x] Connect Alembic to SQLAlchemy metadata
 - [ ] Generate and apply initial migration to a clean database
 - [ ] Remove development `create_all()`
 - [ ] Document migration commands
