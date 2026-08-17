@@ -206,5 +206,18 @@
 ## DAY 21 - 16.08.2026
 ### SESSION 1 (20:20-20:37)
 - Deleted statistics section from the roadmap due to redundancy and low learning value. 
-- Initialized alembic
+- Initialized Alembic
 - Connected Alembic to SQLAlchemy metadata
+
+## DAY 22 - 17.08.2026
+### SESSION 1 (17:40-18:24)
+- Learned that Alembic is for updating existing database without requiring the database to be remade from scratch
+- Learned Alembic commands like:
+    py -m alembic revision --autogenerate -m ""
+    py -m alembic upgrade head
+    py -m alembic current
+    py -m alembic check
+    py -m alembic downgrade -1
+- Replaced automatic `create_all()` with Alembic migrations
+- Tested out the learned Alembic commands
+- Added database migrations section to README

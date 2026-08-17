@@ -56,9 +56,9 @@
 
 - [x] Install and initialize Alembic
 - [x] Connect Alembic to SQLAlchemy metadata
-- [ ] Generate and apply initial migration to a clean database
-- [ ] Remove development `create_all()`
-- [ ] Document migration commands
+- [x] Generate and apply initial migration to a clean database
+- [x] Remove development `create_all()`
+- [x] Document migration commands
 
 ### Testing
 
