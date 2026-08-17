@@ -71,5 +71,5 @@
 
 ### Documentation
 
-- [ ] Complete README with setup, migration, architecture, examples, and limitations
+- [ ] Complete README with project overview, local setup, migrations, and structure
 - [ ] Complete development log
