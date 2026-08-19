@@ -54,36 +54,32 @@ To revert the latest migration:
 py -m alembic downgrade -1
 ```
 
-## Structure
-
-
-```text
 challenge-archive-api/
 |-- alembic/
 |   |-- env.py
 |   |-- README
 |   |-- script.py.mako
-|   `-- versions/ 
-|   alembic.ini
+|   `-- versions/
+|
 |-- app/
 |   |-- routers/
 |   |   |-- __init__.py
 |   |   |-- attempts.py
 |   |   |-- challenges.py
-|   |   |-- games.py
-|   |   `-- stats.py
+|   |   `-- games.py
+|   |
 |   |-- __init__.py
 |   |-- crud.py
 |   |-- database.py
 |   |-- main.py
 |   |-- models.py
 |   `-- schemas.py
+|
 |-- tests/
 |   |-- conftest.py
-|   |-- test_attempts.py
 |   |-- test_challenges.py
-|   |-- test_games.py
-|   `-- test_stats.py
+|   `-- test_games.py
+|
 |-- .gitignore
 |-- alembic.ini
 |-- DEVLOG.md
