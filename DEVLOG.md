@@ -221,3 +221,13 @@
 - Replaced automatic `create_all()` with Alembic migrations
 - Tested out the learned Alembic commands
 - Added database migrations section to README
+
+## DAY 23 - 18.08.2026
+### BREAK DAY
+
+## DAY 24 - 19.08.2026 (20:19-21:01)
+- Created a pytest client fixture in `tests/conftest.py`
+- Created isolated temp SQLite test database
+- Created separate test engine n session factory
+- Overrode get_db() to use test sessions
+- Added a pytest TestClient fixture and cleanup
