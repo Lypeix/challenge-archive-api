@@ -238,3 +238,4 @@
 - Successfuly tested challenge and attempt relationships
 - Deleted test_attempts.py because project of this size doesnt need additional split here
 - Successfuly tested cascade deletion
+- Successfuly tested filtering n pagination

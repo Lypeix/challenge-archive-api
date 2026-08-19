@@ -66,7 +66,7 @@
 - [x] Test successful game CRUD
 - [x] Test challenge and attempt relationships
 - [x] Test cascade deletion
-- [ ] Test filters and pagination
+- [x] Test filters and pagination
 - [ ] Test representative `404` and `422` responses
 
 ### Documentation
