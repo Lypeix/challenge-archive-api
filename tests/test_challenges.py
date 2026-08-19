@@ -68,3 +68,78 @@ def test_challenge_and_attempt_relationships(client):
     assert len(attempts) == 1
     assert attempts[0]["id"] == attempt_id
     assert attempts[0]["challenge_id"] == challenge_id
+
+
+# CASCADE DELETION
+
+def test_deleting_game_cascades_to_children(client):
+    game_response = client.post(
+        "/games",
+        json={
+            "title": "Dark Souls",
+            "genre": "Action RPG",
+            "release_year": 2011
+        }        
+    )
+
+
+    assert game_response.status_code == 201
+    game = game_response.json()
+
+
+
+    challenge_response = client.post(
+        f"/games/{game['id']}/challenges",
+        json={
+            "title": "Hitless Run",
+            "rules": "Complete the game without taking damage.",
+            "status": "in_progress",
+            "difficulty": "extreme"
+        }
+    )
+
+
+    assert challenge_response.status_code == 201
+    challenge = challenge_response.json()
+
+
+
+    attempt_response = client.post(
+        f"/challenges/{challenge['id']}/attempts",
+        json={
+            "result": "progressed",
+            "duration_minutes": 280,
+            "death_count": 0,
+            "notes": "Reached Anor Londo."
+        }
+    )
+
+
+    assert attempt_response.status_code == 201
+    attempt = attempt_response.json()
+
+
+
+    delete_response = client.delete(
+        f"/games/{game['id']}"
+    )
+
+
+    assert delete_response.status_code == 204
+
+
+
+    missing_challenge = client.get(
+        f"/challenges/{challenge['id']}"
+    )
+
+    assert missing_challenge.status_code == 404
+
+
+
+    missing_attempt = client.delete(
+        f"/attempts/{attempt['id']}"
+    )
+
+    assert missing_attempt.status_code == 404
+

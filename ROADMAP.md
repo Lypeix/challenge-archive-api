@@ -65,7 +65,7 @@
 - [x] Create isolated test database and override `get_db()`
 - [x] Test successful game CRUD
 - [x] Test challenge and attempt relationships
-- [ ] Test cascade deletion
+- [x] Test cascade deletion
 - [ ] Test filters and pagination
 - [ ] Test representative `404` and `422` responses
 
