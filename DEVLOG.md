@@ -225,8 +225,10 @@
 ## DAY 23 - 18.08.2026
 ### BREAK DAY
 
-## DAY 24 - 19.08.2026 (20:19-21:01)
+## DAY 24 - 19.08.2026 
+### SESSION 1 (20:19-21:01)
 - Created a pytest client fixture in `tests/conftest.py`
 - Created isolated temp SQLite test database
 - Created separate test engine n session factory
 - Overrode get_db() to use test sessions
+

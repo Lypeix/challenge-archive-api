@@ -51,5 +51,5 @@ def client(tmp_path):
         with TestClient(app) as test_client: # creates a client that can send simulated HTTP requests to the app
             yield test_client # gives TestClient to whichever test requested the fixture
     finally:
-        app.dependency_overrides.clear() # removes test dependency override after the test finishes
+        app.dependency_overrides.pop(get_db, None) # removes test dependency override after the test finishes
         test_engine.dispose() # closes test engine database connection, allowing temp files to be cleared up
