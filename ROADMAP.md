@@ -63,7 +63,7 @@
 ### Testing
 
 - [x] Create isolated test database and override `get_db()`
-- [ ] Test successful game CRUD
+- [x] Test successful game CRUD
 - [ ] Test challenge and attempt relationships
 - [ ] Test cascade deletion
 - [ ] Test filters and pagination
