@@ -235,3 +235,5 @@
 ### SESSION 2 (22:08-x)
 - In `conftest` changed app.dependency_overrides.clear() to app.dependency_overrides.pop(get_db, None) so that it doesnt clean every single override
 - Successfuly tested game CRUD
+- Successfuly tested challenge and attempt relationships
+- Deleted test_attempts.py because project of this size doesnt need additional split here
