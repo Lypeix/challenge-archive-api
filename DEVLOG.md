@@ -230,4 +230,3 @@
 - Created isolated temp SQLite test database
 - Created separate test engine n session factory
 - Overrode get_db() to use test sessions
-- Added a pytest TestClient fixture and cleanup
