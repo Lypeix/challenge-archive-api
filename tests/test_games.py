@@ -47,7 +47,7 @@ def test_game_crud_lifecycle(client):
     )
 
     assert missing_response.status_code == 404
-
+    assert missing_response.json()["detail"] == "Game not found"
 
 # FILTERS AND PAGINATION
 
@@ -109,3 +109,17 @@ def test_game_filters_and_pagination(client):
 
     assert len(pagination_results) == 1
     assert pagination_results[0]["title"] == "Elden Ring"
+
+
+def test_invalid_game_data_returns_422(client):
+    response = client.post(
+        "/games",
+        json={
+            "title": " ",
+            "genre": "Action RPG",
+            "release_year": 2111
+        }
+    )
+
+    assert response.status_code == 422
+    assert "detail" in response.json()

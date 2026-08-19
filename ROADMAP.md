@@ -67,9 +67,9 @@
 - [x] Test challenge and attempt relationships
 - [x] Test cascade deletion
 - [x] Test filters and pagination
-- [ ] Test representative `404` and `422` responses
+- [x] Test representative `404` and `422` responses
 
 ### Documentation
 
-- [ ] Complete README with project overview, local setup, migrations, and structure
-- [ ] Complete development log
+- [x] Complete README with project overview, local setup, migrations, and structure
+- [x] Complete development log

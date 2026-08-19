@@ -226,6 +226,7 @@
 ### BREAK DAY
 
 ## DAY 24 - 19.08.2026 
+# PROJECT CONCLUDED 🎉🎉🎉🎉
 ### SESSION 1 (20:19-21:01)
 - Created a pytest client fixture in `tests/conftest.py`
 - Created isolated temp SQLite test database
@@ -239,3 +240,4 @@
 - Deleted test_attempts.py because project of this size doesnt need additional split here
 - Successfuly tested cascade deletion
 - Successfuly tested filtering n pagination
+- Successfuly tested `404` n `422` responses

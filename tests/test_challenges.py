@@ -134,7 +134,7 @@ def test_deleting_game_cascades_to_children(client):
     )
 
     assert missing_challenge.status_code == 404
-
+    assert missing_challenge.json()["detail"] == "Challenge not found"
 
 
     missing_attempt = client.delete(
@@ -142,4 +142,4 @@ def test_deleting_game_cascades_to_children(client):
     )
 
     assert missing_attempt.status_code == 404
-
+    assert missing_attempt.json()["detail"] == "Attempt not found"
