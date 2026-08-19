@@ -233,7 +233,7 @@
 - Created separate test engine n session factory
 - Overrode get_db() to use test sessions
 
-### SESSION 2 (22:08-x)
+### SESSION 2 (22:08-23:38)
 - In `conftest` changed app.dependency_overrides.clear() to app.dependency_overrides.pop(get_db, None) so that it doesnt clean every single override
 - Successfuly tested game CRUD
 - Successfuly tested challenge and attempt relationships
