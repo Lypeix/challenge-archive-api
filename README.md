@@ -57,6 +57,9 @@ To revert the latest migration:
 py -m alembic downgrade -1
 ```
 
+## Project Structure
+
+```text
 challenge-archive-api/
 |-- alembic/
 |   |-- env.py
@@ -89,4 +92,4 @@ challenge-archive-api/
 |-- README.md
 |-- requirements.txt
 `-- ROADMAP.md
-         
+```
