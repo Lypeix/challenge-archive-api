@@ -1,13 +1,16 @@
 # Challenge Archive API
 
-This is the final learning project without real purpose beyond getting to know new technology.
 
-To summarize, it's a database-backed REST API for gaming challenges featuring 3 layers:
-1. Games
-2. Challenges for games
-3. Attempts for challenges
+A database-backed REST API for recording video games, defining gaming challenges, and tracking individual attempts.
 
-Assisted by Codex 5.6 Sol
+The project demonstrates relational data modelling, validated API design, database migrations, nested resources, cascade deletion, filtering, pagination, and isolated integration testing.
+
+## Resource Model
+
+```text
+Game
+`-- Challenge
+    `-- Attempt
 
 ## Technology
 
